@@ -1,0 +1,549 @@
+/* Base utente */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --giallo: #FFD43B;
+    --arancio: #E95420;
+    --rosso: #B22222;
+    --viola: #3D2B6D;
+    --bianco: #ffffff;
+    --grigio-chiaro: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    transform: translate(-50%, -50%);
+    background: 
+        url("../images/logo.png") no-repeat center center / cover,
+        linear-gradient(135deg, rgba(255,212,59,0.070), rgba(233,84,32,0.070), rgba(61,43,109,0.070));
+    filter: blur(12px) brightness(0.8);
+    opacity: 0.3; /* rende tutto lo sfondo più trasparente */
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    background-blend-mode: normal;
+}
+
+.welcome-header {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px 30px;
+    border-radius: 18px;
+    max-width: 900px;
+
+    /* Box */
+    background: linear-gradient(135deg, rgba(255,212,59,1), rgba(233,84,32,1), rgba(61,43,109,1));
+    box-shadow: 0 10px 25px rgba(0,0,0,0.30);
+
+    /* Testo con gradiente */
+    background: linear-gradient(90deg, #3D2B6D, #6A4C9A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+}
+
+/* Tutti i contenuti sopra */
+.main-section,
+#registerSection,
+#loginSection,
+#areaSection {
+    position: relative;
+    z-index: 1; /* sopra il logo sfocato */
+}
+
+/* Sezione principale utente (homepage) */
+.main-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* importante: forza i figli a essere uguali in altezza */
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left-box,
+.right-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-box {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra orizzontalmente tutti gli elementi */
+    justify-content: flex-start; /* inizia dall’alto invece di space-between */
+    padding: 20px;
+}
+
+.right-box {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Box interni di destra */
+.right-box .box {
+    flex: 1; /* occupano tutto lo spazio disponibile del genitore */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Box generico */
+.box {
+    background: var(--bianco);
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.25);
+    text-align: center;
+    min-width: 350px;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Box sinistro utente */
+.left-box h2 {
+    color: var(--arancio);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2.8rem; 
+    text-align: center;
+    text-shadow: 2px 2px 7px rgba(0,0,0,0.4);
+    font-weight: 700;
+}
+
+.logo {
+    width: 200px;
+    max-width: 80%;
+    margin: 20px 0; /* spazio sopra e sotto il logo */
+}
+
+.left-box .logo {
+    width: 400px; /* aumenta la dimensione del logo */
+    margin: 10px 0; /* spazio sopra e sotto il logo */
+}
+
+/* Box destro utente */
+.right-box .info {
+    margin-top: 20px;
+    min-height: 163px;
+    text-align: left;
+    font-size: 0.9rem;
+    color: var(--viola);
+}
+
+.right-box .box p,
+.right-box .box ul li {
+    font-size: 1.05rem;
+    color: #3D2B6D /* leggermente più grande per adattarsi */
+}
+
+#infoBox .info i {
+    color: #3D2B6D /* icone più visibili e contrastanti */
+}
+
+.right-box .box h2 {
+    font-size: 2.0rem; /* maggiore dimensione per il box grande */
+    margin-bottom: 20px;
+    color: #3D2B6D;
+}
+
+/* Titolo “Orari Segreteria” */
+#segreteriaText p:first-child {
+    font-size: 1.6rem; /* più grande */
+    font-weight: 700;  /* grassetto */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.left-box h2,
+#infoBox h2 {
+    background: linear-gradient(90deg, #3D2B6D, #6A4C9A); /* gradiente viola */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Giorni della settimana */
+#segreteriaText p:nth-child(2),
+#segreteriaText p:nth-child(4) {
+    font-size: 1.2rem; /* leggermente più piccolo del titolo */
+    font-weight: 600;
+    text-align: center;
+    margin: 3px 0;
+}
+
+/* Orari veri e propri */
+#segreteriaText p:nth-child(3),
+#segreteriaText p:nth-child(5),
+#segreteriaText p:nth-child(6) {
+    font-size: 1rem; /* ancora più piccolo */
+    font-weight: 500;
+    text-align: center;
+    margin: 2px 0;
+}
+
+
+/* LOGIN / REGISTER / AREA */
+#registerSection,
+#loginSection,
+#areaSection {
+    background: var(--bianco);
+    border-radius: 18px;
+    padding: 30px 20px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.25);
+    max-width: 400px;
+    width: 95%;
+    text-align: center;
+    margin: 40px auto;
+}
+
+#registerSection h2,
+#loginSection h2,
+#areaSection h2 {
+    color: var(--arancio);
+    margin-bottom: 20px;
+}
+
+/* Bottoni */
+button, .btn {
+    padding: 12px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    transform: scale(1.05);
+}
+
+button:active, .btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Pulsanti Registrati e Login più grandi */
+#showRegister,
+#showLogin {
+    padding: 16px 32px !important; /* forza dimensione maggiore */
+    font-size: 1.2rem !important;  /* testo più grande */
+    border-radius: 30px !important; /* bordi più arrotondati */
+}
+
+#showRegister:hover,
+#showLogin:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3) !important;
+}
+
+.btn {
+    background: var(--arancio);
+    color: var(--bianco);
+}
+
+.btn:hover {
+    background: var(--rosso);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--arancio);
+    color: var(--arancio);
+}
+
+.btn-outline:hover {
+    background: var(--arancio);
+    color: var(--bianco);
+}
+
+/* Input */
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: var(--arancio);
+    box-shadow: 0 0 6px rgba(233, 84, 32, 0.4);
+}
+
+/* Messaggi */
+#registerMessage, #loginMessage {
+    margin-top: 10px;
+    color: var(--rosso);
+    font-size: 0.9rem;
+}
+
+/* Logout */
+#logoutBtn {
+    margin-top: 20px;
+    background: var(--rosso);
+    color: var(--bianco);
+}
+
+#logoutBtn:hover {
+    background: #8b0000;
+}
+
+#showCorsi {
+    padding: 20px 50px;
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+#showCorsi:hover {
+    transform: scale(1.05);
+    background-color: var(--rosso);
+    color: var(--bianco);
+}
+
+#infoBox {
+    padding: 15px;
+    font-size: 1.0rem;
+}
+
+#infoBox h2 {
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.info i {
+    margin-right: 8px;
+    color: var(--arancio);
+    width: 20px;
+    text-align: center;
+}
+
+#segreteriaText p {
+    font-size: 1.1rem;       /* testo più grande */
+    text-align: center;      /* centrato */
+    line-height: 1.6;        /* spazio tra le righe */
+    margin: 5px 0;           /* margine verticale */
+    color: var(--viola);
+}
+
+
+.main-section, #registerSection, #loginSection, #areaSection, .box {
+    position: relative;
+    z-index: 1; /* contenuti sopra overlay */
+}
+
+/* Box con gradiente più strong */
+.box, #registerSection, #loginSection, #areaSection {
+    background: linear-gradient(135deg, rgba(255,212,59,0.96), rgba(233,84,32,0.96), rgba(61,43,109,0.96));
+    color: #ffffff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+#welcomeAfterLogin,
+#loginSection h2,
+#registerSection h2 {
+    background: linear-gradient(90deg, #3D2B6D, #6A4C9A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.25); /* ombra per rilievo */
+}
+
+/**/
+
+/* Login leggermente più grande rispetto al default */
+#loginSection {
+    max-width: 500px; /* ridotto da 600px */
+    padding: 35px 25px; /* leggermente meno spazio interno */
+}
+
+/* Titolo login più grande ma non esagerato */
+#loginSection h2 {
+    font-size: 2.2rem; /* leggermente più piccolo */
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Input leggermente più grandi */
+#loginSection input {
+    width: 95%;
+    padding: 14px; /* leggermente meno */
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+/* Pulsante login leggermente più grande */
+#loginSection button {
+    font-size: 1.4rem;
+    padding: 16px 35px;
+    margin: 18px auto 0 auto;
+    display: block;
+}
+
+/* Messaggio errore più leggibile */
+#loginMessage {
+    font-size: 1rem;
+    margin-top: 12px;
+    color: var(--rosso);
+}
+
+/* Registrazione leggermente più grande rispetto al default */
+#registerSection {
+    max-width: 500px; /* ridotto da 600px */
+    padding: 35px 25px; /* leggermente meno spazio interno */
+}
+
+/* Titolo registrazione più grande ma non esagerato */
+#registerSection h2 {
+    font-size: 2.2rem; /* leggermente più piccolo */
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Input leggermente più grandi */
+#registerSection input {
+    width: 95%;
+    padding: 14px; /* leggermente meno */
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+/* Pulsante registrati leggermente più grande */
+#registerSection button {
+    font-size: 1.4rem;
+    padding: 16px 35px;
+    margin: 18px auto 0 auto;
+    display: block;
+}
+
+/* Messaggio errore più leggibile */
+#registerMessage {
+    font-size: 1rem;
+    margin-top: 12px;
+    color: var(--rosso);
+}
+
+/* Bottoni Login e Registrati nello stesso stile */
+#showLogin, 
+#showRegister {
+    background: linear-gradient(90deg, #3D2B6D, #6A4C9A); /* gradiente viola */
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 28px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#showLogin:hover, 
+#showRegister:hover {
+    background: linear-gradient(90deg, #6A4C9A, #3D2B6D);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+/* Media query per telefoni piccoli */
+@media (max-width: 500px) {
+    /* Main section: colonna unica */
+    .main-section {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 20px !important;
+    }
+
+    /* Box sinistro e destro full width */
+    .left-box, .right-box {
+        width: 95% !important;
+        flex: none !important;
+        margin: 10px 0 !important;
+        min-height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* Box generici interni */
+    .left-box .box, .right-box .box {
+        width: 100% !important;
+        padding: 20px !important;
+        margin: 10px 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Titoli principali */
+    .welcome-header,
+    .left-box h2,
+    .right-box h2 {
+        font-size: 2.5rem !important;
+        text-align: center !important;
+        margin-bottom: 20px !important;
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.25) !important;
+        color: var(--viola) !important; /* colore blu come "informazioni" */
+    }
+
+    /* Logo */
+    .left-box .logo {
+        width: 250px !important;
+        max-width: 90% !important;
+        margin: 20px auto !important;
+    }
+
+    /* Pulsanti più grandi e centrati */
+    button, .btn, #showCorsi, #showRegister, #showLogin {
+        font-size: 1.4rem !important;
+        padding: 18px 35px !important;
+        margin: 15px auto !important;
+        display: block !important;
+    }
+
+    #showCorsi {
+        width: 100% !important;
+        font-size: 1.5rem !important;
+        padding: 20px !important;
+        color: var(--viola) !important; /* colore blu come "informazioni" */
+    }
+
+    /* Testi box destro e corsi */
+    .right-box .info,
+    #corsiList li .corsoInfo p,
+    #segreteriaText p {
+        font-size: 1.2rem !important;
+        line-height: 1.5 !important;
+        text-align: center !important;
+    }
+
+    /* Box “Tutti i corsi” e “Informazioni” adattati sotto */
+    .right-box {
+        flex-direction: column !important;
+        width: 95% !important;
+    }
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Gymnica Fitness Club - Benvenuto</title>
+<meta name="description" content="Gymnica Fitness Club: corsi di BodyBuilding, Karate, Taekwon-do, Kids Gym, Mix Aerobic, G.A.G., Pilates, Ginnastica Dolce e Fitness Latino a INSERISCI_CITTA. Scopri orari e tariffe.">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<h1 class="welcome-header">Benvenuti alla Gymnica Fitness Club</h1>
+
+<!-- Sezione principale -->
+<div class="main-section" id="homeContainer">
+
+    <!-- Box sinistro: Accesso BodyBuilding -->
+    <div class="box left-box">
+        <h2>BodyBuilding</h2>
+        <img src="static/images/logo.png" alt="Logo Palestra" class="logo">
+        <div class="buttons">
+            <button id="showRegister" class="btn btn-anim">Registrati</button>
+            <button id="showLogin" class="btn btn-outline btn-anim">Login</button>
+        </div>
+    </div>
+
+    <!-- Right-box: corsi e info insieme -->
+    <div class="right-box">
+
+        <!-- Box corsi -->
+        <div id="corsiBox" class="box">
+            <button id="showCorsi" class="btn btn-anim">TUTTI I NOSTRI CORSI</button>
+            <div id="segreteriaText" style="margin-top:15px; font-weight:500; color: var(--viola);">
+                <p><strong>Orari Segreteria:</strong></p>
+                <p>Lunedì-Mercoledì-Venerdì:</p>
+                <p>09:00-10:00, 16:00-19:00</p>
+                <p>Martedì-Giovedì:</p>
+                <p>16:00-19:00</p>
+            </div>
+            <ul id="corsiList" style="display:none; list-style:none; padding-left:0; margin-top:10px;">
+                <!-- BODYBUILDING -->
+                <li>
+                    <button class="corsoBtn">BODYBUILDING</button>
+                    <div class="corsoInfo" style="display:none; margin-top:10px;">
+                        <div class="tariffeBtns" style="margin-bottom:10px;">
+                            <button class="tariffaBtn" data-tariffa="base">Tariffa Base</button>
+                            <button class="tariffaBtn" data-tariffa="light">Tariffa Light</button>
+                            <button class="tariffaBtn" data-tariffa="morning">Tariffa Morning</button>
+                        </div>
+                        <div class="tariffaInfo">
+                            <div class="baseInfo">
+                                <p>Tariffa base: 35€/mese</p>
+                                <p>Giorni:</p>
+                                <p>Lunedì-Mercoleì-Venerdì:</p>
+                                <p>09:00-11:30, 16:00-20:00</p>
+                                <p>Martedì-Giovedì:</p>
+                                <p>16:00-20:00</p>
+                                <p>Sabato: 16:00-18:30</p>
+                            </div>
+                            <div class="lightInfo" style="display:none;">
+                                <p>Tariffa light: 30€/mese</p>
+                                <p>Giorni:</p>
+                                <p>Lunedì-Mercoledì-Venerdì</p>
+                                <p>09:00-11:30, 16:00-20:00</p>
+                            </div>
+                            <div class="morningInfo" style="display:none;">
+                                <p>Tariffa morning: 25€/mese</p>
+                                <p>Giorni:</p>
+                                <p>Lunedì-Mercoledì-Venerdì:</p> 
+                                <p>09:00-11:30</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- KARATE -->
+                <li>
+                    <button class="corsoBtn">KARATE</button>
+                    <div class="corsoInfo" style="display:none; margin-top:10px;">
+                        <p>Costo: 35€/mese</p>
+                        <p>Giorni: Martedì-Giovedì</p>
+                        <p>Orario Martedì: 18:00-19:00 / 19:00-20:00</p>
+                        <p>Orario Giovedì: 19:00-20:00</p>
+                    </div>
+                </li>
+
+                <!-- TAEKWON-DO -->
+                <li>
+                    <button class="corsoBtn">TAEKWON-DO</button>
+                    <div class="corsoInfo" style="display:none; margin-top:10px;">
+                        <p>Costo: 35€/mese</p>
+                        <p>Giorni: Lunedì-Giovedì</p>
+                        <p>Primo turno: 17:00-18:00</p>
+                        <p>Secondo turno: 18:00-19:00</p>
+                    </div>
+                </li>
+
+                <!-- KIDS GYM -->
+                <li>
+                    <button class="corsoBtn">KIDS GYM</button>
+                    <div class="corsoInfo" style="display:none; margin-top:10px;">
+                        <p>Fascia Età: dall'ultimo anno di asilo alla quinta elementare</p>
+                        <p>Costo: 30€/mese</p>
+                        <p>Giorni: Mercoledì-Venerdì</p>
+                        <p>Orario: 16:45-17:45</p>
+                    </div>
+                </li>
+
+                <!-- MIX AEROBIC -->
+                <li>
+                    <button class="corsoBtn">MIX AEROBIC</button>
+                    <div class="corsoInfo" style="display:none; margin-top:10px;">
+                        <p>Fascia Età: 12-15 anni</p>
+                        <p>Costo: 30€/mese</p>
+                        <p>Giorni: Mercoledì-Venerdì</p>
+                        <p>Orario: 17:45-18:45</p>
+                    </div>
+                </li>
+
+                <!-- G.A.G. -->
+                <li>
+                    <button class="corsoBtn">G.A.G.</button>
+                    <div class="corsoInfo" style="display:none; margin-top:10px;">
+                        <p>Costo: 30€/mese</p>
+                        <p>Giorni: Lunedì-Venerdì</p>
+                        <p>Orario: 19:00-20:00</p>
+                    </div>
+                </li>
+
+                <!-- G.A.G. PLUS -->
+                <li>
+                    <button class="corsoBtn">G.A.G. PLUS</button>
+                    <div class="corsoInfo" style="display:none; margin-top:10px;">
+                        <p>Costo: 40€/mese</p>
+                        <p>Giorni: Lunedì-Mercoledì-Venerdì</p>
+                        <p>Orario: 19:00-20:00</p>
+                    </div>
+                </li>
+
+                <!-- PILATES -->
+                <li>
+                    <button class="corsoBtn">PILATES</button>
+                    <div class="corsoInfo" style="display:none; margin-top:10px;">
+                        <p>Costo: 30€/mese</p>
+                        <p>Giorni: Lunedì-Venerdì</p>
+                        <p>Scelta tra due turni non intercambiabili</p>
+                        <p>Primo turno: 10:00-11:00</p>
+                        <p>Secondo turno: 20:00-21:00</p>
+                    </div>
+                </li>
+
+                <!-- GINNASTICA DOLCE -->
+                <li>
+                    <button class="corsoBtn">GINNASTICA DOLCE</button>
+                    <div class="corsoInfo" style="display:none; margin-top:10px;">
+                        <p>Costo: 30€/mese</p>
+                        <p>Giorni: Lunedì-Venerdì</p>
+                        <p>Orario: 09:00-10:00</p>
+                    </div>
+                </li>
+
+                <!-- FITNESS LATINO -->
+                <li>
+                    <button class="corsoBtn">FITNESS LATINO</button>
+                    <div class="corsoInfo" style="display:none; margin-top:10px;">
+                        <p>Costo: 30€/mese</p>
+                        <p>Giorni: Martedì-Giovedì</p>
+                        <p>Orario: 20:30-21:30</p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- Box informazioni -->
+        <div class="box" id="infoBox">
+            <h2>Informazioni</h2>
+            <div class="info">
+                <p><i class="fas fa-map-marker-alt"></i> 
+                    <a href="https://www.google.com/maps/search/?api=1&query=INSERISCI_INDIRIZZO,INSERISCI_CITTA" target="_blank" id="mapLink">
+                        Via Antonio Gramsci 44/46, INSERISCI_CITTA
+                    </a>
+                </p>
+                <p><i class="fas fa-envelope"></i> 
+                    <a href="mailto:INSERISCI_EMAIL" id="emailLink">INSERISCI_EMAIL</a>
+                </p>
+                <p><i class="fas fa-phone"></i> <a href="tel:INSERISCI_TELEFONO" id="phoneLink">INSERISCI_TELEFONO</a></p>
+                <p><i class="fas fa-shield-alt"></i>
+                    <a href="static/downloads/modulo segnalazione x tesserato.docx" target="_blank" id="safeGuardingLink">Safe Guarding</a>
+                </p>
+                <p>
+                    <i class="fas fa-file-pdf"></i>
+                    <a href="static/downloads/firmato CODICE DI CONDOTTA.pdf" download target="_blank" id="downloadPdfLink">
+                    Codice di Condotta
+                    </a>
+                </p>
+                <p><i class="fab fa-instagram"></i> 
+                    <a href="https://www.instagram.com/INSERISCI_HANDLE" target="_blank" id="instaLink">Instagram</a>
+                </p>
+                <p><i class="fas fa-file"></i> PEC: INSERISCI_PEC</p>
+                <p><i class="fas fa-id-card"></i> <span id="cf">Codice Fiscale: INSERISCI_CODICE_FISCALE_TELEFONO</span></p>
+                <p><i class="fas fa-hashtag"></i> <span id="affiliazioneINSERISCI_AFFILIAZIONE</span></p>
+            </div>
+        </div>
+
+    </div> <!-- fine right-box -->
+
+</div> <!-- fine main-section -->
+
+<div id="registerSection" style="display:none;">
+    <h2>Registrazione</h2>
+    <form id="registerForm">
+        <input type="text" id="regNomeCognome" placeholder="Nome e Cognome" required><br>
+        <input type="email" id="regEmail" placeholder="Email" required><br>
+        <input type="password" id="regPassword" placeholder="Password" required><br>
+        <input type="tel" id="regPhone" placeholder="Numero di telefono" required><br>
+        <button type="submit" class="btn-anim">Registrati</button>
+    </form>
+    <button id="backHomeFromRegister" class="btn-anim">← Torna indietro</button>
+    <h3 id="registerMessage"></h3>
+</div>
+
+<div id="loginSection" style="display:none;">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <input type="text" id="loginInput" placeholder="Email" required><br>
+        <input type="password" id="loginPassword" placeholder="Password" required><br>
+        <button type="submit" class="btn-anim">Login</button>
+    </form>
+    <button id="backHomeFromLogin" class="btn-anim">← Torna indietro</button>
+    <h3 id="loginMessage"></h3>
+</div>
+
+<div id="areaSection" style="display:none;">
+    <h2 id="welcomeAfterLogin">Benvenuto, <span id="username"></span>!</h2>
+    <p>
+        <i class="fas fa-file-pdf"></i>
+        <a href="#" id="downloadSchedaLink">Scarica la tua scheda</a>
+    </p>
+    <div id="schedaMsg" style="color:red; font-weight:bold; margin-top:10px;"></div>
+    <br>
+    <button id="logoutBtn" class="btn-anim">Logout</button>
+</div>
+
+<script src="static/js/script.js"></script>
+</body>
+</html>
