@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="demo.gif" alt="Demo FitManage WebApp" width="800"/>
+  <img src="demo.gif" alt="Demo FitManage WebApp" height="450" width="600"/>
 </p>
 # Gymnica Fitness Club — Web App (Public Clean Version)
 
