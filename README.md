@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="demo.gif" alt="Demo FitManage WebApp" width="800"/>
+</p>
 # Gymnica Fitness Club — Web App (Public Clean Version)
 
 **IT (Italiano)**  
